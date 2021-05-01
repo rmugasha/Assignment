@@ -8,3 +8,5 @@ response = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-database
 response.columns = ["sepal width","sepal length","petal length","petal width", "flower"]
 response = response.dropna()
 response = pd.DataFrame(data = response, columns = ["sepal width","sepal length"])
+response = response.head(6)
+sns.scatterplot(data = response, x = "sepal width", y = "sepal length")
