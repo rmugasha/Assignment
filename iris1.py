@@ -4,15 +4,15 @@ import numpy as np
 import statistics
 import seaborn as sns
 
-response = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
-response.columns = ["sepal width","sepal length","petal length","petal width", "flower"]
-response = response.dropna()
-response = pd.DataFrame(data = response, columns = ["sepal width","sepal length","petal length","petal width"])
-response.head(10)
+iris = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data")
+iris.columns = ["sepal width","sepal length","petal length","petal width", "flower"]
+iris = iris.dropna()
+iris = pd.DataFrame(data = iris, columns = ["sepal width","sepal length","petal length","petal width"])
+iris.head(10)
 
-response.describe()
+iris.describe()
 
-sns.scatterplot(data=response, x = "petal length" , y= "petal width")
+sns.scatterplot(data=iris, x = "petal length" , y= "petal width")
 
-sns.pairplot(response)
+sns.pairplot(iris)
 
